@@ -1,4 +1,7 @@
-# Tkinter-projects
+<code><img width="10%" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"></code>
+<code><img width="10%" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"></code>
+
+# Tkinter projects
 
 welcome to fabulous projects with tkinter, but what is tkinter?, well tkinter is a library integrated with python and is used to make applications with GUI with just python, I hope you like it and you can enter your projects or if there are errors in mine, fix them
 
