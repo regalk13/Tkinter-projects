@@ -1,7 +1,7 @@
 <code><img width="10%" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"></code>
 <code><img width="10%" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"></code>
 
-# Tkinter projects
+# Tkinter Projects
 
 welcome to fabulous projects with tkinter, but what is tkinter?, well tkinter is a library integrated with python and is used to make applications with GUI with just python, I hope you like it and you can enter your projects or if there are errors in mine, fix them
 
@@ -11,8 +11,6 @@ welcome to fabulous projects with tkinter, but what is tkinter?, well tkinter is
 
 - You will probably have to install extra libraries in some projects, so if you have a problem related to this just find out how to install those libraries
 
-
-<!-- CONTRIBUTING -->
 ### Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -30,3 +28,4 @@ Contributions are what make the open source community such an amazing place to b
 - I'm not a total expert on the subject, forgive common mistakes.
 
 - If you have an unsolvable error, my twitter is open to questions.
+
