@@ -33,5 +33,5 @@ Contributions are what make the open source community such an amazing place to b
 
 Twitter -@regalk2
 
-Project Link: https://github.com/regalk13/calculator-java
+Project Link: https://github.com/regalk13/Tkinter-projects
 
