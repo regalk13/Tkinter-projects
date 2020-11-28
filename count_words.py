@@ -12,16 +12,13 @@ def button_count():
     words = text.split()
 
     frecuency = [words.count(w) for w in words]
-    count = "Numero de veces que se repiten las palabras: \n" + str(list(zip(words, frecuency)))
+    count = "Number of times the words are repeated: \n" + str(list(zip(words, frecuency)))
     myLabel = Label(root, text=count)
     myLabel.pack()
 
-button = Button(root, text="Count your words.", command=button_count)
+button = Button(root, text="Count words", command=button_count)
 button.pack()
 exit_button = Button(root, text="Exit", command=root.quit).pack()
-# print("Cadena\n" + cadenaPalabras +"\n")
-# print("Lista\n" + str(words) + "\n")
-# print("Frecuencias\n" + str(frecuenciaPalab) + "\n")
-# print("Numero de veces que se repiten las palabras: \n" + str(list(zip(words, frecuency)))) 
+
 
 root.mainloop()
