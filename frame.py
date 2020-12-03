@@ -7,10 +7,11 @@ img = PhotoImage(file='images/icon.png')
 root.tk.call('wm', 'iconphoto', root._w, img)
 
 frame = LabelFrame(root, text="new frame", padx=5, pady=5)
-frame.pack()
+frame.pack(padx=10, pady=10)
 
-b = Button(text="Click, click")
-b.pack
-
+b = Button(frame, text="Click, click")
+b2 = Button(frame, text="Now here")
+b.grid(row=0, column=0)
+b2.grid(row=1, column=1)
 
 root.mainloop()
