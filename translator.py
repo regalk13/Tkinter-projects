@@ -1,7 +1,7 @@
 import re
 import tkinter as tk
-from tkinter import *
 import winsound
+from tkinter import *
 
 root = tk.Tk()
 root.title("Translator Morse")
