@@ -1,4 +1,3 @@
-import re
 import tkinter as tk
 import winsound
 from tkinter import *
@@ -9,11 +8,8 @@ root.geometry("460x450")
 img = PhotoImage(file='images/morse.png')
 root.tk.call('wm', 'iconphoto', root._w, img)
 
-
 letter = tk.StringVar()
 morse = tk.StringVar()
-
-# Logic
 
 alphabet_morse = {
 	"a": ".-",
@@ -42,7 +38,6 @@ alphabet_morse = {
 	"y": "-..-",
 	"x": "-.--",
 	"z": "--..",
-	" ": "/"
 }
 
 letter_to_morse = {
@@ -72,23 +67,30 @@ letter_to_morse = {
 	"-..-": "X",
 	"-.--": "Y",
 	"--..": "Z",
-	"/": " "
 }
 
 def translate(letter):
-    return letter.translate(letter.maketrans(alphabet_morse))
+	try:
+		inp = letter
+		res = ""
+		for part in inp:
+			res += alphabet_morse[part]
+		return res
 
+	except KeyError:
+		return "Insert a valid string"
+    
 def translate_morse(message):
 	try:
 		inp = message
 		res = ""
-		for part in inp.split():
+		for part in inp.split("/"):
 			res += letter_to_morse[part]
 		print(res)
 
 		return res
 	except KeyError:
-		return "Remember put double space or put a valid morse"
+		return "Insert a valid morse"
 
 def play(morse):
 		for x in morse:
@@ -105,17 +107,14 @@ def button1():
 	global tt
 	tt = translate(letter.get())	
 	entrytt = Entry(root, width=50, bg="#f1f1f1", borderwidth=0)
-	entrytt.insert(0, "The text in morse is: " + tt)
+	entrytt.insert(0, "The text in morse is: " + str(tt))
 	entrytt.grid(row=2, column=0)
 
 def button2():
-	tm = translate_morse(morse.get().upper())
+	tm = translate_morse(morse.get())
 	entrytm = Entry(root, width=50, bg="#f1f1f1", borderwidth=0)
 	entrytm.insert(0, "Morse in text is: " + tm)
 	entrytm.grid(row=5, column=0)
-
-
-# GUI
 
 mylabel1 = Label(root, text="Note: Write a clean text, without commas or dots", fg="#ff0000")
 mylabel1.grid(row=0, column=0)
@@ -124,7 +123,7 @@ e.grid(row=1, column=0)
 mybutton1 = Button(root, text="Translate", command=button1)
 mybutton1.grid(row=1, column=1)
 
-mylabel2 = Label(root, text='Note: To separate the letters use "  " double space', fg="#ff0000")
+mylabel2 = Label(root, text='Note: To separate the letters use "/"', fg="#ff0000")
 mylabel2.grid(row=3, column=0)
 e1 = Entry(root, textvariable=morse, width=50)
 e1.grid(row=4, column=0)
