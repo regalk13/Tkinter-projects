@@ -1,3 +1,4 @@
+*.db
 *.spec
 build
 dist
